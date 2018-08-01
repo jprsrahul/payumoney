@@ -1,0 +1,94 @@
+<ion-view view-title="Mr. Yo" ng-app="main">
+  <!-- do you want padding -->
+  <ion-content class="padding">
+ 
+    <!-- content goes here 
+    <img ng-src="main/assets/images/yo@2x.png" style="width: 64px; height: 64px">
+    <p>
+      SmartComplex - Visitor<br>
+    -----------------------<br>
+       20 July, 2018<br>
+    A-105, Gaur Saundaryam<br>
+    -----------------------<br>
+     SERVICE PROVIDER<br>
+   
+    Rahul Kumar ,Delhi<br>
+      3232323323<br>
+    </p>
+	
+    <div>
+      <div>
+        Do not print
+      </div>
+      <div id="printable">
+          SmartComplex - Visitor<br>
+    -----------------------<br>
+       20 July, 2018<br>
+    A-105, Gaur Saundaryam<br>
+    -----------------------<br>
+     SERVICE PROVIDER<br>
+   
+    Rahul Kumar ,Delhi<br>
+      3232323323<br>
+      </div>
+      <button ng-click="print('printable')">Print Div</button>
+    </div>
+   <button ng-click="enableBluetooth()">enableBluetooth</button>
+   <button ng-click="list()">list</button>
+   <div class = "list list-inset" ng-repeat="d in listD">
+        <div class = "item">ID----{{d.id}}</div>
+        <div class = "item">Name--{{d.name}}</div>
+        <div class = "item">Adress-{{d.adress}}</div>
+        <button ng-click="conn(d.id)">connect</button>
+   </div>
+  -->
+  <div class="details_container packerdivtopheight" ng-controller="payumoney">
+    <div class="submit_right">
+       <!--***************************--> 
+          <div class="addporperty_from" >
+             <form id="msform" ng-submit="payuMoneyFunc()" action="https://sandboxsecure.payu.in/_payment" method="post" name="payuForm">
+                <fieldset>
+      
+                  <h2 class="fs-title">Payment Page</h2>
+  
+        
+       <input type="hidden" name="key" ng-model="marchentKey" ng-init="marchentKey='P3S4RRyL'" value="P3S4RRyL" />
+       <input type="hidden" name="hash" ng-model="hash" value="{{hash}}"/>
+       <input type="hidden" name="txnid" ng-model="txnId"  value="{{txnId}}" />
+       <!-- <input type="hidden" name="Salts" value="" /> -->
+      <input type="text" id="amount" name="amount" ng-model="amount" placeholder="Amount"/>
+      
+      <input type="text" id="name_id" name="firstname" ng-model="firstname" placeholder="Your Name" required />
+      
+      <input type="text" id="name_id" name="lastname" ng-model="lastname" placeholder="Your lastName" required />
+      
+      <input type="email" name="email" ng-model="email" placeholder="Email id" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+      
+      <input type="text" ng-minlength="10" ng-maxlength="10" name="phone" ng-model="phone" placeholder="Phone Number" required pattern="[789][0-9]{9}" />
+      
+      <input type="hidden" name="productinfo" ng-model="productinfo" ng-init="productinfo = 'propertyPost'" value="propertyPost" />
+      
+      <input type="hidden" style="visibility:hidden;" id="surl" name="surl"  ng-model="surl"  value="http://localhost:3000" placeholder="Address" />
+      
+      <input type="hidden" style="visibility:hidden;" id="furl" name="furl"  ng-model="furl" value="http://localhost:3000" placeholder="Address" />
+      
+      <input type="hidden" name="service_provider" value="payu_paisa" size="64" />
+      
+      <!--   <input type="text" id="description" name="address"  ng-model="address" placeholder="Address" required /> -->
+      
+      <center><input type="submit" style="width:158px !important;display: -webkit-box;" class="next action-button" value="Submit"> <span ng-show="searchButtonText == 'Please Wait...'" ><img style="width: 21px !important;" src="view/images/loading.gif"></span>
+                   {{ searchButtonText }}</center>
+     </fieldset>
+       </form>
+          </div>
+       </div>
+    </div>
+    
+ </div>
+    <mini
+      content="'some content via attribute'">
+      Some <span class="green">transcluded</span> content
+    </mini>
+
+  </ion-content>
+</ion-view>
